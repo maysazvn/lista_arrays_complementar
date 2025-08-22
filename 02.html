@@ -14,11 +14,14 @@
     */
 
     //ENTRADA
+    let playlist = ["Everlong", "The Pretender", "Learn to Fly"];
+    const novaMusica = prompt(`Adicione uma nova música:`);
 
 
     //PROCESSAMENTO
-
+    playlist.push(novaMusica);
+    playlist.shift();
 
     //SAÍDA
-    
+    alert(`O estado atual da playlist é ${playlist.join(", ")}`);
 </script>

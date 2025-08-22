@@ -12,11 +12,21 @@
     */
 
     //ENTRADA
-
+    let fila = ["Ana", "Bruno", "Carla"];
+    const novoCliente = prompt(`Informe o nome do novo cliente`);
+    const clienteAtendido = Number(prompt(`Informe o cliente que já foi atendido da lista ${fila.join(", ")}. Digite 0 - Ana, 1 - Bruno, 2 - Carla`));
 
     //PROCESSAMENTO
-
-
+    fila.push(novoCliente);
+    
     //SAÍDA
+    if(clienteAtendido >= 0 && clienteAtendido <= 2){
+        fila.splice(clienteAtendido, 1);
+
+        alert(`A nova lista de clientes será ${fila.join(", ")}`)
+    } else{
+        alert(`Cliente inválido.`)
+    }
+
 
 </script>

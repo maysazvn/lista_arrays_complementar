@@ -13,11 +13,15 @@
     */
 
     //ENTRADA
+    let jogadores = ["Pedro", "Sofia", "Lucas", "Helena", "Gabriel", "Laura"];
 
 
     //PROCESSAMENTO
+    let timeAzul = jogadores.slice(-3);
+    let timeVermelho = jogadores.slice(0, -3);
 
 
     //SAÍDA
+    alert(`O time azul tem os participantes ${timeAzul.join(", ")}. O time vermelho tem os participantes ${timeVermelho.join(", ")}.`);
     
 </script>

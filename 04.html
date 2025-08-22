@@ -15,9 +15,19 @@
     */
 
     //ENTRADA
+    let ingredientes = ["Farinha", "Açúcar", "Ovos", "Sal", "Chocolate"];
+    const ingredienteSecreto = prompt(`Existe um ingrediente secreto na lista: ${ingredientes.join(", ")}?. Digite S - Sim ou N  - Não.`).toUpperCase().trim();
 
 
     //PROCESSAMENTO
+    if(ingredienteSecreto === "S"){
+        const ingrediente = prompt(`Informe qual o ingrediente secreto:`);
+        const posicao = ingredientes.indexOf(ingrediente);
+
+        alert(`Na lista ${ingredientes.join(", ")} o ingrediente secreto está na posição ${posicao + 1}`);
+    } else{
+        alert(`Não há nenhum ingrediente secreto na lista ${ingredientes.join(", ")}`);
+    }
 
 
     //SAÍDA
