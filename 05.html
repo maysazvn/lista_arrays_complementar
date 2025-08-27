@@ -18,11 +18,11 @@
 
     //ENTRADA
     const codigosDeAcesso = ["Delta-7", "Alpha-9", "Omega-3", "Gama-4", "Zeta-1"];
-    const copiaPublica = codigosDeAcesso.slice(-30);
+    const copiaPublica = codigosDeAcesso.slice(-3);
 
     //PROCESSAMENTO
     let codigosAtualizados = codigosDeAcesso;
-    codigosAtualizados.replace("Omega-3", "Sigma-5");
+    codigosAtualizados.splice(2, 1, "Sigma-5");
 
     //SAÍDA
     alert(`A lista original era: ${codigosDeAcesso.join(", ")}, a lista pública era: ${copiaPublica.join(", ")} e a lista atualizada é ${codigosAtualizados.join(", ")}`);

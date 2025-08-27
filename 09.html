@@ -15,11 +15,16 @@
     */
     
     //ENTRADA
+    let timeTitular = ["Phoenix", "Jett", "Sova", "Sage", "Cypher"];
+    let jogadorFora = prompt(`Insira o nome do jogador que vai sair do jogo com os participantes: ${timeTitular.join(", ")}`);
+    let jogadorNovo = prompt(`Insira o nome do jogador que vai entrar no lugar.`);
 
 
     //PROCESSAMENTO
-
+    const indice = timeTitular.indexOf(jogadorFora);
+    const adicao = timeTitular.splice(indice, 1, jogadorNovo);
 
     //SAÍDA
+    alert(`A escalação final do time é ${timeTitular.join(", ")}`);
     
 </script>

@@ -24,9 +24,17 @@
     */
 
     //ENTRADA
-
+    let inventarioMagico = ["Poção de Cura", "Elixir da Coragem", "Antídoto Universal", "Gás do Sono"];
+    const itemVendido = prompt(`Insira o nome do item que foi vendido do estoque ${inventarioMagico.join(", ")}`);
 
     //PROCESSAMENTO
+    const indice = inventarioMagico.indexOf(itemVendido)
+
+    if(indice >= 0 && indice <= 3){
+        const remover = inventarioMagico.splice(indice, 1)
+    } else{
+        alert(`Item ${itemVendido} não encontrado no estoque.`)
+    }
 
 
     //SAÍDA
