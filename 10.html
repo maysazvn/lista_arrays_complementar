@@ -32,8 +32,9 @@
 
     if(indice >= 0 && indice <= 3){
         const remover = inventarioMagico.splice(indice, 1)
+        alert(`Item "${itemVendido}" removido do estoque.`);
     } else{
-        alert(`Item ${itemVendido} não encontrado no estoque.`)
+        alert(`Item "${itemVendido}" não encontrado no estoque.`);
     }
 
 
