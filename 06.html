@@ -17,14 +17,14 @@
     //ENTRADA
     const etapasLoteA = ["Corte", "Montagem", "Pintura", "Verificação de Qualidade", "Embalagem"];
     const listaUsuario = Number(prompt(`Informe o número de etapas concluídas por um lote`));
-    let temNumeroCorretoDeEtapas = etapasLoteA === listaUsuario.length;
+    let temNumeroCorretoDeEtapas = etapasLoteA.length === listaUsuario;
 
 
     //PROCESSAMENTO
     let passouNaQualidade = etapasLoteA.indexOf("Verificação de Qualidade");
-    let loteAprovado;
+    let loteAprovado = temNumeroCorretoDeEtapas && passouNaQualidade;;
     
-    if(temNumeroCorretoDeEtapas == true && passouNaQualidade == true){
+    if(loteAprovado){
 
         alert(`O lote foi aprovado.`);
     } else{
